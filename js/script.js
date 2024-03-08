@@ -57,7 +57,7 @@ const divContainer = document.createElement('div');
 // console.log(divContainer);
 
 // inserisco le classi e id all'elemento creato
-divContainer.className = 'cardapp d-flex justify-content-center align-items-center';
+divContainer.className = 'cardapp d-flex justify-content-center align-items-center m-1 fs-1';
 divContainer.id= (bgCard)
 // sostituisco il console.log all'interno delle mie condizioni  con una o più variabili variabili;
 
@@ -65,5 +65,9 @@ divContainer.id= (bgCard)
 divContainer.innerHTML = cardCont;
 const htmlApp = document.querySelector('.app');
 htmlApp.append(divContainer);
+
+
+
+
 
 }
