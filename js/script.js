@@ -18,8 +18,8 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 */
 
 // variabili
-let htmlTmp = '';
-let cardCont = '';
+let htmlTmp 
+let cardCont
 let cardNum = 100;
 // stampo risultati all'interno della console
 
@@ -28,20 +28,22 @@ for (let i = 1; i <= 100; i++){
     // inserisco la prima consizione (per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.)
     if(i % 3 === 0 && i % 5 === 0){
         // console.log('FizzBuzz');
-        cardCont = 'FizzBuzz'
+        cardCont = 'FizzBuzz';
     // inserisco la seconda consizione (per i multipli di 5 stampi “Buzz”.)
     } else if(i % 5 === 0){
         // console.log('Buzz');
-        cardCont = 'Buzz'
+        cardCont = 'Buzz';
     // inserisco la terza consizione (per i multipli di 3 stampi “Fizz”)
     } else if(i % 3 === 0){
         // console.log('Fizz');
-        cardCont = 'Buzz'
+        cardCont = 'Buzz';
     // inserisco l'ultima consizione (per tutto ciò che non rispetta la condizione 1, 2 e 3)
     } else {
-        console.log(i)
+        cardCont = i;
     } 
-}
+
+
+
 
 // ... aquesto punto mi posso divertire un pò di più, creando un container nel DOM , aggiungendo (attraverso la funzione append()) un elemento html con il numero o la stringa corretta da mostrare.
 
@@ -51,15 +53,15 @@ const divContainer = document.createElement('div');
 // console.log(divContainer);
 
 // inserisco le classi e id all'elemento creato
-divContainer.className = 'd-flex justify-content-between align-content-center flex-wrap';
+divContainer.className = ' cardapp d-flex justify-content-center align-items-center';
 
 //creo un clico per la quantità di elementi presenti all'interno del div
-for(let i = 1; i <= cardNum; i++ ){
-    htmlTmp += `<div>${cardCont}</div>`;
-}
 
 // sostituisco il console.log all'interno delle mie condizioni  con una variabile che dichiaro prima(cardCont);
 
-// appendo il risultato allintero
+// appendo il risultato all'intero
+divContainer.innerHTML = cardCont;
 const htmlApp = document.querySelector('.app');
+htmlApp.append(divContainer);
 
+}
