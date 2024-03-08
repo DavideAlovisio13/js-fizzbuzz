@@ -18,7 +18,6 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 */
 
 // variabili
-let htmlTmp 
 let cardCont
 let cardNum = 100;
 // stampo risultati all'interno della console
