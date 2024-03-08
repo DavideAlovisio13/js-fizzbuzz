@@ -1,25 +1,42 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 #divContainer {
-    max-width: 1000px;
-    margin: 10px auto;
-    background-color: aqua;
+  width: 100%;
+  padding: 5px;
+  margin: auto;
+  background-color: aqua;
 }
 
 .cardapp {
-    width: 100px;
-    height: 100px;
-    aspect-ratio: 1 / 1;
+  width: 160px;
+  height: 160px;
+  aspect-ratio: 1 / 1;
+}
+
+#bggreen1 {
+  background-color: #014422;
+}
+
+#bggreen2 {
+  background-color: #345f3c;
+}
+
+#bggreen3 {
+  background-color: #8a9a5b;
+}
+
+#bggreen4 {
+  background-color: #bcb88a;
 }

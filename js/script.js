@@ -18,27 +18,32 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 */
 
 // variabili
-let cardCont
+let bgCard = '';
+let cardCont ='';
 let cardNum = 100;
 // stampo risultati all'interno della console
 
 // utilizzo un ciclo for per dichiarare fino a che numero devo prender
 for (let i = 1; i <= 100; i++){
     // inserisco la prima consizione (per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.)
-    if(i % 3 === 0 && i % 5 === 0){
+    if(i % 15 === 0){
         // console.log('FizzBuzz');
         cardCont = 'FizzBuzz';
+        bgCard = 'bggreen1';
     // inserisco la seconda consizione (per i multipli di 5 stampi “Buzz”.)
     } else if(i % 5 === 0){
         // console.log('Buzz');
         cardCont = 'Buzz';
+        bgCard = 'bggreen2';
     // inserisco la terza consizione (per i multipli di 3 stampi “Fizz”)
     } else if(i % 3 === 0){
         // console.log('Fizz');
-        cardCont = 'Buzz';
+        cardCont = 'Fizz';
+        bgCard = 'bggreen3';
     // inserisco l'ultima consizione (per tutto ciò che non rispetta la condizione 1, 2 e 3)
     } else {
         cardCont = i;
+        bgCard = 'bggreen4';
     } 
 
 
@@ -52,11 +57,9 @@ const divContainer = document.createElement('div');
 // console.log(divContainer);
 
 // inserisco le classi e id all'elemento creato
-divContainer.className = ' cardapp d-flex justify-content-center align-items-center';
-
-//creo un clico per la quantità di elementi presenti all'interno del div
-
-// sostituisco il console.log all'interno delle mie condizioni  con una variabile che dichiaro prima(cardCont);
+divContainer.className = 'cardapp d-flex justify-content-center align-items-center';
+divContainer.id= (bgCard)
+// sostituisco il console.log all'interno delle mie condizioni  con una o più variabili variabili;
 
 // appendo il risultato all'intero
 divContainer.innerHTML = cardCont;
