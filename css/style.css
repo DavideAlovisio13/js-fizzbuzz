@@ -8,55 +8,76 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-size: 16px;
-}
-
 #divContainer {
   width: 100%;
+  height: 100vh;
   padding: 5px;
   margin: auto;
-  background-color: aqua;
+}
+
+body {
+  background-image: url(../img/pexels-vlada-karpovich-4452397.jpg);
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 100px;
 }
 
 .cardapp {
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   aspect-ratio: 1 / 1;
-  transition: all 1s cubic-bezier(.215, .61, .355, 1);
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  font-size: 1em;
+  font-family: "Italiana", sans-serif;
+  font-weight: 700;
 }
 
-#bggreen1 {
-  background-color: #014422;
+.bggreen1 {
+  background-color: #a1a686;
+  opacity: 0.9;
 }
 
-#bggreen2 {
-  background-color: #345f3c;
+.bggreen2 {
+  background-color: #c9ad85;
+  opacity: 0.9;
 }
 
-#bggreen3 {
-  background-color: #8a9a5b;
+.bggreen3 {
+  background-color: #cfc9a7;
+  opacity: 0.9;
 }
 
-#bggreen4 {
-  background-color: #bcb88a;
+.bggreen4 {
+  background-color: #f2e1c5;
+  opacity: 0.9;
 }
 
-.scale1{
-  transform: rotateX(180deg);
+.scale1 {
+  scale: 1.05;
 }
-.scale2{
-  transform: rotateX(180deg);
-}
-
-.scale3{
-  transform: rotateY(180deg);
+.scale2 {
+  scale: 1.05;
 }
 
-.scale4{
-  transform: rotateX(180deg);
+.scale3 {
+  scale: 1.05;
 }
 
+.scale4 {
+  scale: 1.05;
+}
 
+ .scroll_y {
+  color: brown;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 
-
+#section1{
+  width: 100%;
+  height: 100vh;
+}

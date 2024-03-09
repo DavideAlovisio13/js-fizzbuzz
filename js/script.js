@@ -20,60 +20,96 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 
 // variabili
 
-let bgCard = '';
-let cardCont ='';
+let cardCont = '';
 let cardNum = 100;
 // stampo risultati all'interno della console
 
 // utilizzo un ciclo for per dichiarare fino a che numero devo prender
-for (let i = 1; i <= 100; i++){
-    let cardScale ='';
+for (let i = 1; i <= 100; i++) {
+    let cardScale = '';
+    let bgCard = '';
     // inserisco la prima consizione (per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.)
-    if(i % 15 === 0){
+    if (i % 15 === 0) {
         // console.log('FizzBuzz');
         cardCont = 'FizzBuzz';
         bgCard = 'bggreen1';
         cardScale = 'scale1';
-    // inserisco la seconda consizione (per i multipli di 5 stampi “Buzz”.)
-    } else if(i % 5 === 0){
+        // inserisco la seconda consizione (per i multipli di 5 stampi “Buzz”.)
+    } else if (i % 5 === 0) {
         // console.log('Buzz');
         cardCont = 'Buzz';
         bgCard = 'bggreen2';
         cardScale = 'scale2';
-    // inserisco la terza consizione (per i multipli di 3 stampi “Fizz”)
-    } else if(i % 3 === 0){
+        // inserisco la terza consizione (per i multipli di 3 stampi “Fizz”)
+    } else if (i % 3 === 0) {
         // console.log('Fizz');
         cardCont = 'Fizz';
         bgCard = 'bggreen3';
         cardScale = 'scale3';
-    // inserisco l'ultima consizione (per tutto ciò che non rispetta la condizione 1, 2 e 3)
+        // inserisco l'ultima consizione (per tutto ciò che non rispetta la condizione 1, 2 e 3)
     } else {
         cardCont = i;
         bgCard = 'bggreen4';
         cardScale = 'scale4';
-    } 
+    }
+    // ... a questo punto mi posso divertire un pò di più, creando un container nel DOM , aggiungendo (attraverso la funzione append()) un elemento html con il numero o la stringa corretta da mostrare.
+    // creo un elemento div all'interno del mio html
+    const divContainer = document.createElement('div');
+    // console.log(divContainer);    // inserisco le classi e id all'elemento creato
+    divContainer.className = 'cardapp d-flex justify-content-center align-items-center m-1 text-light';    // aggiunto un listener per inserire le classi con il mouseover
+    divContainer.addEventListener('mouseover', () => {
+        divContainer.classList.toggle(cardScale);
+        divContainer.classList.toggle(bgCard);
+    })
+    // sostituisco il console.log all'interno delle mie condizioni  con una o più variabili variabili;
+    // appendo il risultato all'intero
 
-
-
-
-  // ... a questo punto mi posso divertire un pò di più, creando un container nel DOM , aggiungendo (attraverso la funzione append()) un elemento html con il numero o la stringa corretta da mostrare.
-   
-   
-   // creo un elemento div all'interno del mio html
-   const divContainer = document.createElement('div');
-   // console.log(divContainer);
-   
-   // inserisco le classi e id all'elemento creato
-   divContainer.className = 'cardapp d-flex justify-content-center align-items-center m-1 fs-1';
-   divContainer.id= (bgCard);
-   divContainer.addEventListener('mouseover', () => {
-       divContainer.classList.toggle (cardScale);
-   })
-   // sostituisco il console.log all'interno delle mie condizioni  con una o più variabili variabili;
-   
-   // appendo il risultato all'intero
-   divContainer.innerHTML = cardCont;
-   const htmlApp = document.querySelector('.app');
-  htmlApp.append(divContainer);
+    divContainer.innerHTML = cardCont;
+    const htmlApp = document.querySelector('.app');
+    htmlApp.append(divContainer);
 
 }
+/*
+<div class="container">  sectContainer
+  <div class="row">  rowContainer
+    <div class="col"></div>    colContainer
+    <div class="col"></div>    colContainer2
+  </div>
+  <div class="row">    rowContainer2 
+    <div class="col"></div>    colContainer3
+    <div class="col"></div>    colContainer4
+    <div class="col"></div>    colContainer5
+  </div>
+</div>
+*/
+
+
+const sectContainer = document.createElement('div');
+const rowContainer = document.createElement('div');
+const colContainer = document.createElement('div');
+const colContainer2 = document.createElement('div');
+const rowContainer2 = document.createElement('div');
+const colContainer3 = document.createElement('div');
+const colContainer4= document.createElement('div');
+const colContainer5 = document.createElement('div');
+
+sectContainer.appendChild(rowContainer);
+rowContainer.appendChild(colContainer);
+rowContainer.appendChild(colContainer2);
+sectContainer.appendChild(rowContainer2);
+rowContainer2.appendChild(colContainer3);
+rowContainer2.appendChild(colContainer4);
+rowContainer2.appendChild(colContainer5);
+
+sectContainer.className ='container'
+rowContainer.className ='row'
+colContainer.className ='col'
+colContainer2.className ='col' 
+rowContainer2.className ='row'
+colContainer3.className ='col1' 
+colContainer4.className ='col1' 
+colContainer5.className ='col1'
+
+console.log(sectContainer);
+
+sectContainer.innerHTML = 
