@@ -17,7 +17,9 @@ Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda ch
 Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 */
 
+
 // variabili
+
 let bgCard = '';
 let cardCont ='';
 let cardNum = 100;
@@ -25,49 +27,53 @@ let cardNum = 100;
 
 // utilizzo un ciclo for per dichiarare fino a che numero devo prender
 for (let i = 1; i <= 100; i++){
+    let cardScale ='';
     // inserisco la prima consizione (per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.)
     if(i % 15 === 0){
         // console.log('FizzBuzz');
         cardCont = 'FizzBuzz';
         bgCard = 'bggreen1';
+        cardScale = 'scale1';
     // inserisco la seconda consizione (per i multipli di 5 stampi “Buzz”.)
     } else if(i % 5 === 0){
         // console.log('Buzz');
         cardCont = 'Buzz';
         bgCard = 'bggreen2';
+        cardScale = 'scale2';
     // inserisco la terza consizione (per i multipli di 3 stampi “Fizz”)
     } else if(i % 3 === 0){
         // console.log('Fizz');
         cardCont = 'Fizz';
         bgCard = 'bggreen3';
+        cardScale = 'scale3';
     // inserisco l'ultima consizione (per tutto ciò che non rispetta la condizione 1, 2 e 3)
     } else {
         cardCont = i;
         bgCard = 'bggreen4';
+        cardScale = 'scale4';
     } 
 
 
 
 
-// ... aquesto punto mi posso divertire un pò di più, creando un container nel DOM , aggiungendo (attraverso la funzione append()) un elemento html con il numero o la stringa corretta da mostrare.
-
-
-// creo un elemento div all'interno del mio html
-const divContainer = document.createElement('div');
-// console.log(divContainer);
-
-// inserisco le classi e id all'elemento creato
-divContainer.className = 'cardapp d-flex justify-content-center align-items-center m-1 fs-1';
-divContainer.id= (bgCard)
-// sostituisco il console.log all'interno delle mie condizioni  con una o più variabili variabili;
-
-// appendo il risultato all'intero
-divContainer.innerHTML = cardCont;
-const htmlApp = document.querySelector('.app');
-htmlApp.append(divContainer);
-
-
-
-
+  // ... a questo punto mi posso divertire un pò di più, creando un container nel DOM , aggiungendo (attraverso la funzione append()) un elemento html con il numero o la stringa corretta da mostrare.
+   
+   
+   // creo un elemento div all'interno del mio html
+   const divContainer = document.createElement('div');
+   // console.log(divContainer);
+   
+   // inserisco le classi e id all'elemento creato
+   divContainer.className = 'cardapp d-flex justify-content-center align-items-center m-1 fs-1';
+   divContainer.id= (bgCard);
+   divContainer.addEventListener('mouseover', () => {
+       divContainer.classList.toggle (cardScale);
+   })
+   // sostituisco il console.log all'interno delle mie condizioni  con una o più variabili variabili;
+   
+   // appendo il risultato all'intero
+   divContainer.innerHTML = cardCont;
+   const htmlApp = document.querySelector('.app');
+  htmlApp.append(divContainer);
 
 }

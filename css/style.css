@@ -20,9 +20,10 @@ body {
 }
 
 .cardapp {
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
   aspect-ratio: 1 / 1;
+  transition: all 1s cubic-bezier(.215, .61, .355, 1);
 }
 
 #bggreen1 {
@@ -40,4 +41,22 @@ body {
 #bggreen4 {
   background-color: #bcb88a;
 }
+
+.scale1{
+  transform: rotateX(180deg);
+}
+.scale2{
+  transform: rotateX(180deg);
+}
+
+.scale3{
+  transform: rotateY(180deg);
+}
+
+.scale4{
+  transform: rotateX(180deg);
+}
+
+
+
 
