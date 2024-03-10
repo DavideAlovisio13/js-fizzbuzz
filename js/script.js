@@ -68,6 +68,9 @@ for (let i = 1; i <= 100; i++) {
     const htmlApp = document.querySelector('.app');
     htmlApp.append(divContainer);
 
+    
+
+
 }
 /*
 <div class="container">  sectContainer
@@ -112,4 +115,9 @@ colContainer5.className ='col1'
 
 console.log(sectContainer);
 
-sectContainer.innerHTML = 
+colContainer.innerText = 'Fizz buzz is a group word game for children to teach them about division. Players take turns to count incrementally, replacing any number divisible by three with the word "fizz", and any number divisible by five with the word "buzz", and any number divisible by both three and five with the word "fizzbuzz".'
+
+
+
+// const htmlCont  = document.getElementById('section1')
+// htmlCont.append(sectContainer)
