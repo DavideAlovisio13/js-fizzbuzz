@@ -21,7 +21,6 @@ const rowContainer2 = document.createElement('div');
 const colContainer3 = document.createElement('div');
 const colContainer4= document.createElement('div');
 const colContainer5 = document.createElement('div');
-const img1 = document.createElement('img');
 // generiamo un contenitore delle immagini
 let arrayImg = ['../img/math2_1.jpeg', '../img/math2_2.jpeg', '../img/math2_3.jpeg'];
 // generiamo una scala gerarchica tra gli elementi
